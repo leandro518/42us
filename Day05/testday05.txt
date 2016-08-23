@@ -1,0 +1,408 @@
+test ex01
+
+int main()
+{
+    ft_putnbr(-1);
+   ft_putchar('\n');
+   ft_putnbr(1);
+   ft_putchar('\n');
+    ft_putnbr(-8);
+   ft_putchar('\n');
+    ft_putnbr(2147483647);
+   ft_putchar('\n');
+    ft_putnbr(-2147483648);
+    ft_putchar('\n');
+    ft_putnbr(42);
+   
+    return 0;
+}
+
+test for ex02
+
+int main()
+{
+    char x[5];
+    char y[50];
+    
+    printf("Test 0 = %s\n",ft_strcpy(x, "12345"));
+    printf("Test 0 = %s\n",strcpy(x, "12345"));
+    printf("Test 1 = %s\n",ft_strcpy(x, "1234567890"));
+    printf("Test 1 = %s\n",strcpy(x, "1234567890"));
+    printf("Test 2 = %s\n",ft_strcpy(y, "123"));
+    printf("Test 2 = %s\n",strcpy(y, "123"));
+    printf("Test 3 = %s\n",ft_strcpy(x, "TEST00"));
+    printf("Test 3 = %s\n",strcpy(x, "TEST00"));
+    printf("Test 4 = %s\n",ft_strcpy(x, "0"));
+    printf("Test 4 = %s\n",strcpy(x, "0"));
+    printf("Test 5 = %s\n",ft_strcpy(x, ""));
+    printf("Test 5 = %s\n",strcpy(x, ""));
+    printf("Test 6 = %s\n",ft_strcpy(x, "@#$%^sadf"));
+    printf("Test 6 = %s\n",strcpy(x, "@#$%^sadf"));
+
+    return(0);
+
+}
+
+test for ex03
+int main()
+{
+    char x[50];
+    char y[40];
+
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));    
+
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+
+    return(0);
+}
+
+test ex 04
+
+int main()
+{
+    char x[50];
+    char y[40];
+
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));    
+
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+    printf("Test 0 = %s\n",ft_strncpy(x, "TEST00", 10));
+
+    return(0);
+}
+
+ex04
+
+int main()
+{
+    char x[50];
+    char y[40];
+
+    printf("Test 0 = %s\n",ft_strncpy(x, "12345678901234567890", 10));
+    printf("Test 0 = %s\n",ft_strncpy(y, x, 5));    
+
+    printf("Test 1 = %s\n",ft_strncpy(x, "TEST00", 30));
+    printf("Test 1 = %s\n",ft_strncpy(y, x, 10));
+
+    printf("Test 2 = %s\n",ft_strncpy(x, "TEST00", 0));
+    printf("Test 2 = %s\n",ft_strncpy(y, x, 1));
+
+    printf("Test 3 = %s\n",ft_strncpy(x, "12345678901234567890", -10));
+    printf("Test 3 = %s\n",ft_strncpy(y, x, 5));    
+
+    return(0);
+}
+
+test ex05 
+int main()
+{
+  char haystack[20] = "TutorialsPoint";
+  char needle[] = "sP";
+  char *ret1;
+  char *ret2;
+
+  ret1 = ft_strstr(haystack, needle);
+  ret2 = strstr(haystack, needle);
+
+  printf("RESULT 0: %s\n", haystack+5);
+  
+  printf("RESULT 1: %s\n", ret1);
+  printf("RESULT 2: %s\n", ret2);
+  
+  
+  return(0);
+}
+
+ex06
+int main( )
+{
+	printf("3. mine: %i\n", ft_strcmp("Hello", "Hellooo"));
+	printf("3. lib: %i\n", strcmp("Hello", "Hellooo"));
+	printf("\n");
+	printf("4. mine: %i\n", ft_strcmp("Helloooo", "Hellooo"));
+	printf("4. lib: %i\n", strcmp("Helloooo", "Hellooo"));
+	printf("5. mine: %i\n", ft_strcmp("Helloooo", "Helloooo"));
+	printf("5. lib: %i\n", strcmp("Helloooo", "Helloooo"));
+
+   printf("TEST 1 %i\n", ft_strcmp("123","123"));
+   printf("TEST 1 %i\n", strcmp("123","123"));
+   
+   printf("TEST 2 %i\n", ft_strcmp("1234","123"));
+   printf("TEST 2 %i\n", strcmp("1234","123"));
+
+   printf("TEST 3 %i\n", ft_strcmp("123","1234"));
+   printf("TEST 3 %i\n", strcmp("123","1234"));
+}
+
+
+test
+ex 07
+
+int main ()
+{
+
+	printf("TEST1 %i\n",strncmp("ABCDE", "ABCDE", 0));
+	printf("TEST1 %i\n",ft_strncmp("ABCDE", "ABCDE", 0));
+
+	printf("TEST2 %i\n",strncmp("ABCDE", "ABCDE", 2));
+	printf("TEST2 %i\n",ft_strncmp("ABCDE", "ABCDE", 2));
+
+	printf("TEST3 %i\n",   strncmp("13511", "ABCDE", 2));
+	printf("TEST3 %i\n",ft_strncmp("13511", "ABCDE", 2));
+
+	printf("TEST4 %i\n",   strncmp("13511", "15348", 9));
+	printf("TEST4 %i\n",ft_strncmp("13511", "15348", 9));
+
+	printf("TEST5 %i\n",   strncmp("13511", "56115", 5));
+	printf("TEST5 %i\n",ft_strncmp("13511", "56115", 5));
+
+	printf("TEST6 %i\n",strncmp("13511", "ABCDE", 0));
+	printf("TEST6 %i\n",ft_strncmp("13511", "ABCDE", 0));
+
+   return(0);
+}
+
+test
+ex08
+int main( )
+{
+	char ret1[] = "789bc**/";
+	
+	printf("789bc**/: %s\n", ft_strupcase(ret1));
+	
+	strcpy( ret1, "Test" );
+	printf("Test: %s\n", ft_strupcase(ret1));
+
+	strcpy( ret1,"--aaaAAA");
+	printf("--aaaAAA: %s\n", ft_strupcase(ret1));
+
+	strcpy( ret1,"test");
+	printf("test: %s\n", ft_strupcase(ret1));
+
+	strcpy( ret1," ");
+	printf(" : %s\n", ft_strupcase(ret1));
+
+	strcpy( ret1,"");
+	printf(": %s\n", ft_strupcase(ret1));
+}
+
+test
+ex09
+
+int main( )
+{
+	char ret1[] = "789bc**/";
+	
+	printf("789bc**/: %s\n", ft_strlowcase(ret1));
+	
+	strcpy( ret1, "Test" );
+	printf("Test: %s\n", ft_strlowcase(ret1));
+
+	strcpy( ret1,"--aaaAAA");
+	printf("--aaaAAA: %s\n", ft_strlowcase(ret1));
+
+	strcpy( ret1,"test");
+	printf("test: %s\n", ft_strlowcase(ret1));
+
+	strcpy( ret1," ");
+	printf(" : %s\n", ft_strlowcase(ret1));
+
+	strcpy( ret1,"");
+	printf(": %s\n", ft_strlowcase(ret1));
+}
+
+
+test 
+ex11
+int main()
+{
+	printf("teste     : %i \n",ft_str_is_alpha("teste "));
+	printf("teste123  : %i \n",ft_str_is_alpha("teste123"));
+	printf("123teste  : %i \n",ft_str_is_alpha("123 teste"));
+	printf("  2#teste : %i \n",ft_str_is_alpha("  2#teste "));
+	printf("          : %i \n",ft_str_is_alpha("          "));
+	printf("          : %i \n",ft_str_is_alpha(""));
+
+	return(0);
+}
+
+test
+ex12
+
+int main()
+{
+	printf("teste     : %i \n",ft_str_is_numeric("teste "));
+	printf("teste123  : %i \n",ft_str_is_numeric("teste123"));
+	printf("123teste  : %i \n",ft_str_is_numeric("123 teste"));
+	printf("  2#teste : %i \n",ft_str_is_numeric("  2#teste "));
+	printf("          : %i \n",ft_str_is_numeric("          "));
+	printf("          : %i \n",ft_str_is_numeric(""));
+	printf("          : %i \n",ft_str_is_numeric("2147483647"));
+	printf("          : %i \n",ft_str_is_numeric("-2147483647"));
+
+
+	return(0);
+}
+
+test 
+ex13
+int main()
+{
+	printf("teste     : %i \n",ft_str_is_lowercase("teste "));
+	printf("teste     : %i \n",ft_str_is_lowercase("teste"));
+	printf("teste     : %i \n",ft_str_is_lowercase("TESTE"));	
+	printf("teste123  : %i \n",ft_str_is_lowercase("teste123"));
+	printf("123teste  : %i \n",ft_str_is_lowercase("123 teste"));
+	printf("  2#teste : %i \n",ft_str_is_lowercase("  2#teste "));
+	printf("          : %i \n",ft_str_is_lowercase("          "));
+	printf("          : %i \n",ft_str_is_lowercase(""));
+	printf("          : %i \n",ft_str_is_lowercase("2147483647"));
+	printf("          : %i \n",ft_str_is_lowercase("-2147483647"));
+
+
+	return(0);
+}
+
+test
+ex14
+int main()
+{
+	printf("teste     : %i \n",ft_str_is_uppercase("teste "));
+	printf("teste     : %i \n",ft_str_is_uppercase("teste"));
+	printf("TESTE     : %i \n",ft_str_is_uppercase("TESTE"));
+	printf("TESte     : %i \n",ft_str_is_uppercase("TESte"));	
+	printf("teste123  : %i \n",ft_str_is_uppercase("teste123"));
+	printf("123teste  : %i \n",ft_str_is_uppercase("123 teste"));
+	printf("  2#teste : %i \n",ft_str_is_uppercase("  2#teste "));
+	printf("          : %i \n",ft_str_is_uppercase("          "));
+	printf("          : %i \n",ft_str_is_uppercase(""));
+	printf("          : %i \n",ft_str_is_uppercase("2147483647"));
+	printf("          : %i \n",ft_str_is_uppercase("-2147483647"));
+
+
+	return(0);
+}
+
+test
+ex15
+int main()
+{
+	printf("teste     : %i \n",ft_str_is_printable("teste "));
+	printf("teste     : %i \n",ft_str_is_printable("teste"));
+	printf("TESTE     : %i \n",ft_str_is_printable("TESTE"));
+	printf("TESte     : %i \n",ft_str_is_printable("TESte"));	
+	printf("teste123  : %i \n",ft_str_is_printable("teste123"));
+	printf("123teste  : %i \n",ft_str_is_printable("123 teste"));
+	printf("  2#teste : %i \n",ft_str_is_printable("  2#teste "));
+	printf("          : %i \n",ft_str_is_printable("          "));
+	printf("          : %i \n",ft_str_is_printable("	"));
+	printf("          : %i \n",ft_str_is_printable(""));
+	printf("          : %i \n",ft_str_is_printable("2147483647"));
+	printf("          : %i \n",ft_str_is_printable("-2147483647"));
+
+	return(0);
+}
+
+ex16
+#include <stdio.h>
+#include <string.h>
+
+int main( )
+{
+   char src[50], dest[50];
+   char x[10] = "hello";
+   char y[10] = " world";
+
+ //	printf("TEST 0 : |%s|\n", strcat(x, y));
+ 	printf("TEST 0 : |%s|\n", ft_strcat(x, y));
+  
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+   printf("TEST 1 : |%s|\n", strcat(dest, src));
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+   printf("TEST 1 : |%s|\n", ft_strcat(dest, src));
+
+   strcpy(src,  "first   ");
+   strcpy(dest, "second");
+   printf("TEST 2 : |%s|\n", strcat(dest, src));
+   strcpy(src,  "first   ");
+   strcpy(dest, "second");
+   printf("TEST 2 : |%s|\n", ft_strcat(dest, src));
+   
+   strcpy(src,  " 1@#$849first   ");
+   strcpy(dest, "   second");
+   printf("TEST 3 : |%s|\n", strcat(dest, src));
+   strcpy(src,  " 1@#$849first   ");
+   strcpy(dest, "   second");
+   printf("TEST 3 : |%s|\n", ft_strcat(dest, src));
+
+   return(0);
+}
+
+ex17
+int main( )
+{
+   char src[50], dest[50];
+
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+   printf("TEST 1 : |%s|\n", strncat(dest, src,5));
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+   printf("TEST 1 : |%s|\n", ft_strncat(dest, src,5));
+
+   strcpy(src,  "first   ");
+   strcpy(dest, "second");
+   printf("TEST 2 : |%s|\n", strncat(dest, src,10));
+   strcpy(src,  "first   ");
+   strcpy(dest, "second");
+   printf("TEST 2 : |%s|\n", ft_strncat(dest, src,10));
+   
+   strcpy(src,  " 1@#$849first   ");
+   strcpy(dest, "   second");
+   printf("TEST 3 : |%s|\n", strncat(dest, src,0));
+   strcpy(src,  " 1@#$849first   ");
+   strcpy(dest, "   second");
+   printf("TEST 3 : |%s|\n", ft_strncat(dest, src,0));
+
+   return(0);
+}
+
+ex18
+int main( )
+{
+   char src[50], dest[50];
+
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+   printf("TEST 1 : |%lu|%s|\n", strlcat(dest, src,10),dest );
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+   printf("TEST 1 : |%lu|%s|\n", strlcat(dest, src,10),dest );
+
+   strcpy(src,  "first   ");
+   strcpy(dest, "second");
+   printf("TEST 2 : |%lu|%s|\n", strlcat(dest, src,10),dest );
+   strcpy(src,  "first   ");
+   strcpy(dest, "second");
+   printf("TEST 2 : |%u|%s|\n", ft_strlcat(dest, src,10),dest);
+   
+   strcpy(src,  " 1@#$849first   ");
+   strcpy(dest, "   second");
+   printf("TEST 2 : |%lu|%s|\n", strlcat(dest, src,10),dest );
+   strcpy(src,  " 1@#$849first   ");
+   strcpy(dest, "   second");
+   printf("TEST 2 : |%lu|%s|\n", strlcat(dest, src,10),dest );
+
+   return(0);
+}

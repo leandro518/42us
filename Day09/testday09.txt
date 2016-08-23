@@ -1,0 +1,38 @@
+
+ex00
+
+
+
+
+ex05
+
+typedef int		t_testcase[4];
+
+t_testcase		g_tests[] = {
+	{1, 2, 3, 2},
+	{-1, 9, 5, 5},
+	{-7, -9, 6, -7},
+	{1, 1, 3, 1},
+	{1, 3, 1, 1},
+	{3, 1, 1, 1},
+	{2, 2, 2, 2},
+};
+
+int				ft_button(int i, int j, int k);
+
+int				main(void)
+{
+	int i;
+	int result;
+
+	i = 0;
+	while (i < (int)(sizeof(g_tests) / sizeof(t_testcase)))
+	{
+		result = ft_button(g_tests[i][0], g_tests[i][1], g_tests[i][2]);
+		printf("median(%d, %d, %d) = %d\n", g_tests[i][0], g_tests[i][1],
+				g_tests[i][2], result);
+		if (result != g_tests[i][3])
+			printf("FAIL\n");
+		i++;
+	}
+}

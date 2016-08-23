@@ -1,0 +1,194 @@
+
+ex00
+
+int main()
+{
+    char *p;
+    char *p2;
+    char test[] = "123456";
+ 	char test1[] = "123456";
+ 	char test2[50] = "123456";
+ 	char test3[50] = "123456";
+
+    p2 = strdup("Hello world");
+    printf("TEST1 : %s ", p2);
+    printf("SIZE1 : %lu\n",sizeof(p2));
+    p = ft_strdup("Hello world");
+    printf("TEST1 : %s ",p);
+    printf("SIZE1 : %lu\n",sizeof(p));
+
+	free(p2);
+	free(p);
+
+    p2 = strdup("");
+    printf("TEST1 : %s ", p2);
+    printf("SIZE1 : %lu\n",sizeof(p2));
+    p = ft_strdup("");
+    printf("TEST1 : %s ",p);
+    printf("SIZE1 : %lu\n",sizeof(p));
+
+	free(p2);
+	free(p);
+
+    p2 = strdup(test);
+    printf("TEST1 : %s ", p2);
+    printf("SIZE1 : %lu\n",sizeof(p2));
+    p = ft_strdup(test1);
+    printf("TEST1 : %s ",p);
+    printf("SIZE1 : %lu\n",sizeof(p));
+
+	free(p2);
+	free(p);
+
+    p2 = strdup(test2);
+    printf("TEST1 : %s ", p2);
+    printf("SIZE1 : %lu\n",sizeof(p2));
+    p = ft_strdup(test3);
+    printf("TEST1 : %s ",p);
+    printf("SIZE1 : %lu\n",sizeof(p));
+
+	return(0);
+}
+
+
+
+ex01
+
+
+int main ()
+{
+	int *n=0;
+	int max=20;
+	int min=10;
+	int i = 0;
+
+	n = ft_range(min,max);
+	if (n == NULL)
+		return (0);
+	i = 0;
+	while(i < (max - min) )
+	{	printf("test : %i\n",*n);
+		n++;
+		i++;
+	}	
+	printf("test : %i\n",*n);
+	return(0);
+}
+
+
+ex02
+
+int main(void)
+{
+    int *tab = NULL;
+    int nElem;
+    
+    nElem = ft_ultimate_range(&tab, 5, 10);
+    for (int i = 0; i < nElem; ++i)
+    {
+        printf("Integer case %d: %d\n", i, tab[i]);
+    }
+    return (0);
+}
+
+
+
+
+void	ft_strcpy_n(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\n';
+}
+int		strlen_argv(int argc, char **argv)
+{
+	int i;
+	int j;
+	int len;
+
+	i = 1;
+	len = 0;
+	
+	while (i != argc)
+	{
+		while (argv[i][j++]);
+		len += j;
+		j = 0;
+		i++;
+	}
+	return (len);
+}
+char	*ft_concat_params(int argc, char **argv)
+{
+	char *out;
+	int i;
+	int j;
+	int k;
+	int len;
+
+	i = 1;
+	j = 1;
+	k = 0;
+	
+	len = strlen_argv(argc, argv);
+	out = malloc(sizeof(out) * (len));
+
+	if (out)
+	{
+		while (i != argc)
+		{
+			while (argv[i][j])
+			{
+				out[k] = argv[i][j];
+				k++;
+				j++;
+			}
+			out[k++] = '\0';
+			j = 0;
+			i++;
+		}
+		return (out);
+	}
+	else
+		return (NULL);
+}
+
+int main(int argc, char *argv[])
+{
+	int i;
+
+	if (argc == 1)
+		return (0);
+
+	ft_putstr(ft_concat_params(argc, argv));
+	return 0;
+}
+
+
+
+
+int main(int argc, char *argv[])
+{
+	printf("%s",ft_concat_params( argc,  argv) );
+	return 0;
+}
+
+
+
+
+
+
+ 
+cat $1 | grep -i "Nicolas\tBomber" | awk -F'\t' '{print $3}' | awk -F'[^0-9]*' '$1
+
+
+
+
+

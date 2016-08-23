@@ -1,0 +1,28 @@
+intra : https://profile.intra.42.fr/
+my number : (415) 234-0548 
+Sublime Tips : https://gist.github.com/lucasfais/1207002
+
+patch :  day00 	vogsphere@vgs.42.us.org:intra/2016/activities/piscine_c_day_00/llima
+
+DOCS
+1- https://docs.google.com/document/d/1szoS1Gk6gu69ZnBYXWlvhPEukDPPNzzDdHyOqkwRdGA/edit
+2- https://docs.google.com/document/d/1Pg_PbCQpUMBbQ6ud0Ea21O9dhLTEvx4JB2OhjQY8Ucw/edit
+3- https://docs.google.com/document/d/1cRisZTpxC3xJq_agZRWuaAIUe6e5cbVk1lcbXl40mG4/edit
+
+purple jack - https://home.riking.org/42/
+
+compile
+gcc program.c -Wall -Wextra -Werror -o test
+compilar em conjunto
+gcc ../../../ft_putchar.c -o teste program.c -Wall -Wextra -Werror
+
+
+check a norma
+norminette -R CheckForbiddenSourceHeader
+
+declarations in ft_strlcat are bad aligned  
+-make sure all variable names are aligned
+
+site for tests  http://run.cs50.net/
+
+http://aovivonatv.com/assistir-globo-ao-vivo-online-hd/
