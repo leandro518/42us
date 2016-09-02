@@ -1,5 +1,5 @@
 intra : https://profile.intra.42.fr/
-my number : (415) 234-0548 
+my number : (415) 234-0548
 Sublime Tips : https://gist.github.com/lucasfais/1207002
 
 patch :  day00 	vogsphere@vgs.42.us.org:intra/2016/activities/piscine_c_day_00/llima
@@ -20,9 +20,17 @@ gcc ../../../ft_putchar.c -o teste program.c -Wall -Wextra -Werror
 check a norma
 norminette -R CheckForbiddenSourceHeader
 
-declarations in ft_strlcat are bad aligned  
+declarations in ft_strlcat are bad aligned
 -make sure all variable names are aligned
 
 site for tests  http://run.cs50.net/
 
 http://aovivonatv.com/assistir-globo-ao-vivo-online-hd/
+day11
+https://github.com/ssmrabet/piscine42/tree/master/j11
+https://cdn.intra.42.fr/pdf/pdf/580/d11.en.pdf
+
+eval
+https://cdn.intra.42.fr/pdf/pdf/821/proj02.en.pdf
+
+bsqhttps://github.com/miniponps/42-Piscine-C/tree/master/Projet/BSQ
